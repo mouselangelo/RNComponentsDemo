@@ -1,31 +1,29 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
+import routeNames from "./routeNames";
+import ComponentsScreen from "./views/ComponentsScreen";
+import ViewsScreen from "./views/ViewsScreen";
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.contatiner}>
-      <View style={styles.content}>
-        <Text style={styles.header}>Components</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name={routeNames.components}
+          component={ComponentsScreen}
+          options={{ title: "Components" }}
+        />
+        <Stack.Screen
+          name={routeNames.views}
+          component={ViewsScreen}
+          options={{ title: "Views & Layout" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  contatiner: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  content: {
-    flex: 1,
-    padding: 20,
-  },
-  header: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 16,
-    color: '#111111',
-  },
-});
 
 export default App;
