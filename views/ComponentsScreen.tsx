@@ -4,8 +4,10 @@ import { FlatList, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import routeNames from "../routeNames";
 
+const excludeRoutes = ["Components", "Color"];
+
 export const screens = Object.values(routeNames).filter(
-  route => route !== "Components",
+  route => !excludeRoutes.includes(route),
 );
 
 const ComponentsScreen = ({ navigation }: NativeStackScreenProps<any>) => {
