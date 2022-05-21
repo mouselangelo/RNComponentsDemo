@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import routeNames from "./routeNames";
 import ComponentsScreen from "./views/ComponentsScreen";
+import ImagesScreen from "./views/ImagesScreen";
 import TextsScreen from "./views/TextsScreen";
 import ViewsScreen from "./views/ViewsScreen";
 
@@ -22,6 +23,7 @@ const App = () => {
           options={{ title: "View & Layout" }}
         />
         <Stack.Screen name={routeNames.Text} component={TextsScreen} />
+        <Stack.Screen name={routeNames.Image} component={ImagesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
