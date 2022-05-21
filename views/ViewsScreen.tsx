@@ -15,66 +15,64 @@ const Boxes = () => {
 const ViewsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView style={styles.container}>
-        <View>
-          <Text style={styles.sectionTitle}>Flex direction</Text>
+      <ScrollView style={{ flex: 1 }}>
+        <Text style={styles.sectionTitle}>Flex direction</Text>
 
-          <View style={styles.section}>
-            <Text style={styles.text}>column (default)</Text>
-            <View>
-              <Boxes />
-            </View>
-
-            <Text style={styles.text}>row</Text>
-            <View style={{ flexDirection: "row" }}>
-              <Boxes />
-            </View>
-
-            <Text style={styles.text}>row-reverse</Text>
-            <View style={{ flexDirection: "row-reverse" }}>
-              <Boxes />
-            </View>
-
-            <Text style={styles.text}>column-reverse (default)</Text>
-            <View style={{ flexDirection: "column-reverse" }}>
-              <Boxes />
-            </View>
+        <View style={styles.section}>
+          <Text style={styles.text}>column (default)</Text>
+          <View>
+            <Boxes />
           </View>
 
-          <Text style={styles.sectionTitle}>Justify Content</Text>
+          <Text style={styles.text}>row</Text>
+          <View style={{ flexDirection: "row" }}>
+            <Boxes />
+          </View>
 
-          <View style={styles.section}>
-            <Text style={styles.text}>center</Text>
-            <View style={{ flexDirection: "row", justifyContent: "center" }}>
-              <Boxes />
-            </View>
+          <Text style={styles.text}>row-reverse</Text>
+          <View style={{ flexDirection: "row-reverse" }}>
+            <Boxes />
+          </View>
 
-            <Text style={styles.text}>space-evenly</Text>
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-evenly",
-              }}>
-              <Boxes />
-            </View>
+          <Text style={styles.text}>column-reverse (default)</Text>
+          <View style={{ flexDirection: "column-reverse" }}>
+            <Boxes />
+          </View>
+        </View>
 
-            <Text style={styles.text}>space-around</Text>
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-around",
-              }}>
-              <Boxes />
-            </View>
+        <Text style={styles.sectionTitle}>Justify Content</Text>
 
-            <Text style={styles.text}>space-between</Text>
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-              }}>
-              <Boxes />
-            </View>
+        <View style={styles.section}>
+          <Text style={styles.text}>center</Text>
+          <View style={{ flexDirection: "row", justifyContent: "center" }}>
+            <Boxes />
+          </View>
+
+          <Text style={styles.text}>space-evenly</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+            }}>
+            <Boxes />
+          </View>
+
+          <Text style={styles.text}>space-around</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-around",
+            }}>
+            <Boxes />
+          </View>
+
+          <Text style={styles.text}>space-between</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}>
+            <Boxes />
           </View>
         </View>
       </ScrollView>
@@ -83,9 +81,6 @@ const ViewsScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   sectionTitle: {
     fontSize: 24,
     fontWeight: "800",
