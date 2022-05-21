@@ -1,0 +1,6 @@
+module Pods_RNComponentsDemo_RNComponentsDemoTests {
+  umbrella header "Pods-RNComponentsDemo-RNComponentsDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
