@@ -4,12 +4,8 @@ import { FlatList, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import routeNames from "../routeNames";
 
-const routesAndTitles: Partial<Record<keyof typeof routeNames, string>> = {
-  views: "Views & Layouts",
-};
-
-export const screens = Object.entries(routesAndTitles).map(
-  ([route, title]) => ({ route, title }),
+export const screens = Object.values(routeNames).filter(
+  route => route !== "Components",
 );
 
 const ComponentsScreen = ({ navigation }: NativeStackScreenProps<any>) => {
@@ -20,8 +16,8 @@ const ComponentsScreen = ({ navigation }: NativeStackScreenProps<any>) => {
       renderItem={({ item }) => (
         <TouchableOpacity
           style={styles.cellWrapper}
-          onPress={() => navigation.navigate(item.route)}>
-          <Text style={styles.cellTitle}>{item.title}</Text>
+          onPress={() => navigation.navigate(item)}>
+          <Text style={styles.cellTitle}>{item}</Text>
         </TouchableOpacity>
       )}
     />

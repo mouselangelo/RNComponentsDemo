@@ -1,6 +1,7 @@
 const routeNames = {
-  components: "components",
-  views: "views",
+  Components: "Components",
+  Views: "Views",
+  Text: "Text",
 } as const;
 
 export default routeNames;
