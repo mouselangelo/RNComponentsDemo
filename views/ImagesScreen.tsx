@@ -66,7 +66,7 @@ const ImagesScreen = () => {
           </ImageBackground>
         </View>
 
-        <Text style={styles.gridTitle}>🇵🇹 Protugal</Text>
+        <Text style={styles.gridTitle}>🇵🇹 Portugal</Text>
         <View style={styles.grid}>
           {gridImages.map((uri, index) => (
             <Image
